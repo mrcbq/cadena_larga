@@ -1,15 +1,10 @@
-'''Ejercicio_CadenaMasLarga
-En este ejercicio tendrás que hacer una función que reciba un arreglo de cadenas o strings de una dimensión y que encuentre cuál es la cadena más larga en ese arreglo.
-Descripción
-Lo que harás es crear una función o un programa en el cual dado un arreglo de una dimensión que cuente con solo cadenas, entonces lea todos los valores del arreglo y obtenga el índice del arreglo que cuenta con la cadena con más caracteres.'''
-
 import os
 # import ast
 
 os.system('cls')
 
 def run():
-    word_init = ['estrella', 'explosión', 'guitarra', 'plástico', 'navaja', 'martillo', 'libros', 'lápiz', 'lapicera', 'aluminio', 'embarcación','letra', 'agujeta','ventana', 'librería', 'sonido', 'universidad', 'rueda', 'perro', 'llaves', 'camisa', 'pelo', 'papá']
+    word_init = ['estrella', 'explosión', 'guitarra', 'plástico', 'navaja', 'martillo', 'libros', 'lápiz', 'lapicera', 'aluminio', 'embarcación','letra', 'agujeta','ventana', 'librería', 'sonido', 'universidad', 'rueda', 'perro', 'llaves', 'camisa', 'pelo', 'papá'] # Cadena usada para iniciliazr en caso de no dogotar nada
     words = []
     words_length = []
     # lenght_word = 0
@@ -19,7 +14,7 @@ def run():
     if len(words) == 0 :
         words = word_init
     else:
-        words = words.strip('][').split(', ')
+        words = words.strip('][').split(', ') #Aqui trasformo el string de entrada para quitarle los [] y separar el contenido por comas pasandolo de esta manera a un tipo de dato list, ya que es el mas parecido a un array en python
         # words = ast.literal_eval(words)
         # number_of_words = len(words)
         # word_larger = list(range(number_of_words))
@@ -28,7 +23,7 @@ def run():
         #     word_larger[word] = lenght_word
     
     for word in words:
-        words_length.append(len(word))
+        words_length.append(len(word)) #Creo la lista que contendra la lngitud de cada palabra o string
         # print(words)
         # print(type(words))
         # print(i)
@@ -41,7 +36,7 @@ def run():
     # print(words_length)
     # print(max(words_length))
     # print(words_length.index(max(words_length)))
-    index_find = words_length.index(max(words_length))
+    index_find = words_length.index(max(words_length)) #Selecciono el indice de la lista que busco, es decir la palabra mas larga.
     # print(words[index_find])
     print("The string that you gave me was:\n", words, '\n')
     print("The first larger string in the array that you gave me is: " + words[index_find])
